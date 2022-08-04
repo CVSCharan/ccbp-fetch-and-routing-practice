@@ -1,6 +1,5 @@
 import { Component } from "react";
-import Loader from "react-loader-spinner";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { TailSpin } from "react-loader-spinner";
 
 import "./index.css";
 
@@ -54,7 +53,7 @@ class BlogItemDetails extends Component {
       <div className="blog-container">
         {isLoading ? (
           <div testid="loader">
-            <Loader type="TailSpin" color="#00bfff" height={50} width={50} />
+            <TailSpin type="TailSpin" color="#00bfff" height={50} width={50} />
           </div>
         ) : (
           this.renderBlogItemDetails()
